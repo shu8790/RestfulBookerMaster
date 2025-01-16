@@ -22,8 +22,14 @@ Feature: Validating Booking APIs
   
   Scenario: verify if user is able to successfully do booking using Create Booking API
     Given create booking Payload with firstname, lastname and bookingdates
-    When user calls create booking API with post method 
+    When user calls "CreateBookingAPI" API with "post" method 
     Then API call is successfull with status code and staus
+    
+  Scenario: verify that user can successfully fetch the booking details using GetBookingAPI
+  	Given get the booking id of created booking
+  	When user calls "GetBookingAPI" api with "get" method
+  	Then Api call is successfull with status code and status
+  	
 
   
    # Scenario Outline: Title of your scenario outline

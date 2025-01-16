@@ -6,9 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(dryRun = true,features="src/test/java/Features/BookingValidation.feature",
-					plugin ="json:target/jsonReports/cucumber-report.json",
-					glue= {"StepDefinition"})
+@CucumberOptions(dryRun = false,features="src/test/java/Features/BookingValidation.feature",
+					plugin ={ "pretty","json:target/jsonReports/cucumber-report.json"},
+					glue= {"StepDefinition"},
+					monochrome = true
+					)
 public class TestRunner {
 	
 }
