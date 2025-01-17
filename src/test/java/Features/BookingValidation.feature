@@ -30,6 +30,14 @@ Feature: Validating Booking APIs
   	When user calls "GetBookingAPI" api with "get" method
   	Then Api call is successfull with status code and status
   	
+ Scenario: verify that user can successfully upadate the existing booking details
+ 
+ Given create the autorisation token
+ And create the payload for the update API
+ When user calls "UpdateBookingAPI" Api with "put" method
+ Then Api call is successfull with status code 200 and status ok
+ 
+  	
 
   
    # Scenario Outline: Title of your scenario outline
